@@ -1,5 +1,7 @@
 # xunit.MySql
 [![CI](https://github.com/twsl/xunit.MySql/workflows/CI/badge.svg)](https://github.com/twsl/xunit.MySql/actions?query=workflow%3ACI)
+[![Version](https://img.shields.io/nuget/vpre/xunit.MySql.svg)](https://www.nuget.org/packages/xunit.MySql/)
+[![Downloads](https://img.shields.io/nuget/dt/xunit.MySql.svg)](https://www.nuget.org/packages/xunit.MySql/)
 [![license](https://img.shields.io/github/license/twsl/xunit.MySql)](LICENSE)
 
 Easy unit testing integration for MySql with support for real queries using the [Entity Framework Core provider for MySql](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql).
