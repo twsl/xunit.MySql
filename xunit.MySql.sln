@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A29DD0BF-3244-4B73-B997-69581ADD02EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9BBA4261-7B36-4945-83A5-802116FA2371}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xunit.MySql", "src\xunit.MySql\xunit.MySql.csproj", "{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xunit.MySql.Tests", "test\xunit.MySql.Tests\xunit.MySql.Tests.csproj", "{DE3CD1E8-70D4-4A47-885E-40098407BFE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42C04AA1-C00D-4E39-AD75-7C27A1D06236}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
+		README.md = README.md
+		.github\workflows\stale.yml = .github\workflows\stale.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3CD1E8-70D4-4A47-885E-40098407BFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3CD1E8-70D4-4A47-885E-40098407BFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3CD1E8-70D4-4A47-885E-40098407BFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3CD1E8-70D4-4A47-885E-40098407BFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0B98F4E-736D-4E60-9A3E-57AF0133A0F5} = {A29DD0BF-3244-4B73-B997-69581ADD02EE}
+		{DE3CD1E8-70D4-4A47-885E-40098407BFE9} = {9BBA4261-7B36-4945-83A5-802116FA2371}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CCBD259-2AD1-42D2-9C50-CF5C808BFF8C}
+	EndGlobalSection
+EndGlobal

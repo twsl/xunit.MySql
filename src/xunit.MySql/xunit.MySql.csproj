@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>CA1000;CA1031;CA1051;CA1062;CA1063;CA1707;CA2007;CA2214</NoWarn>  
+  </PropertyGroup>
+
+  <!-- Assembly -->
+  <PropertyGroup>
+    <AssemblyTitle>xunit.MySql</AssemblyTitle>
+    <AssemblyName>xunit.MySql</AssemblyName>
+    <RootNamespace>Xunit.MySql</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <!-- Nuget -->
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>xunit.MySql</PackageId>
+    
+    <Description>Easy unit testing integration for MySql with support for real queries</Description>
+    <Copyright>Copyright (c) 2020 twsl</Copyright>
+    <Authors>twsl</Authors>
+    <PackageTags>xunit;efcore;mysql</PackageTags>
+
+    <PackageProjectUrl>https://github.com/twsl/xunit.MySql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/twsl/xunit.MySql</RepositoryUrl>
+    
+    <UseFullSemVerForNuGet>true</UseFullSemVerForNuGet>
+    
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- Source & Symbols -->
+  <PropertyGroup>
+    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+  
+  <!-- Documentation -->
+  <PropertyGroup>
+    <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
+  </PropertyGroup>
+
+  <!-- MySql binaries -->
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\v5_7_24\errmsg.sys" />
+    <EmbeddedResource Include="Resources\v5_7_24\mysqld.exe" />
+    <EmbeddedResource Include="Resources\v8_0_12\errmsg.sys" />
+    <EmbeddedResource Include="Resources\v8_0_12\libeay32.dll" />
+    <EmbeddedResource Include="Resources\v8_0_12\mysqld.exe" />
+    <EmbeddedResource Include="Resources\v8_0_12\ssleay32.dll" />
+  </ItemGroup>
+
+  <!-- References -->
+  <ItemGroup>
+    <PackageReference Include="GitVersionTask" Version="5.3.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.6" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+  </ItemGroup>
+
+</Project>
